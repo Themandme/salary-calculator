@@ -10,5 +10,6 @@
  	cin >> salary; // inputting salary
      part = salary * 10; // part time salary
      full = salary * 40;  //full salary
-     cout << "You make $" << part << " dollars for every 10 hours worked " << "and $" << full << " for every 40 hours!" << endl;
+     cout << "You make $" << part << " dollars for every 10 hours worked " << "and $" << full << " for every 40 hours!" << endl; // part time and full time calculations.
+     cout << "Your yearly salary is $" << full * 52 << "!" << endl; // outputting yearly salary
  }
