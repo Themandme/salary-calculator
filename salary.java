@@ -16,9 +16,7 @@ public class salary{
     public static double tax(double salary){
         System.out.println("What's the tax rate of your state by percentage?");
         double tax_rate = (console.nextDouble());
-        double ends = (salary /tax_rate * 100);
-        return ends;
-
+        return (salary /tax_rate * 100);
     }
 
 }
