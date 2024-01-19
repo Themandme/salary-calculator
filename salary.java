@@ -8,15 +8,16 @@ public class salary{
         double part = salary * 20;
         double full = salary * 40;
         System.out.println("What's the tax rate of your state by percentage?");
-        double tax_rate = console.nextInt();
-        tax_rate= tax_rate/100;
-        System.out.println("You make : " + part + "$ For every 20 hours of work" );
-        System.out.println("You make :" + full + "$ For every 40 hours of work");
-        double full_time_post_tax = full - (full * tax_rate);
-        double part_time_post_tax = part - (part * tax_rate);
-        System.out.println("You make :" + part_time_post_tax + "$ After taxes working part time");
-        System.out.println("You make :" + full_time_post_tax + "$ After taxes working full time");
+
+        System.out.println("You make : " + tax(part) + "$ Per Paycheck After taxes working part time");
+        System.out.println("You make : " + tax(full) + "$ Per Paycheck After taxes working full time");
         
+    }
+    public static double tax(double salary){
+        double tax_rate = console.nextDouble();
+        double taxedsalary = (salary * (tax_rate / 100));
+        double full = taxedsalary + salary;
+        return full;
     }
 
 }
